@@ -16,10 +16,154 @@
                OpenPaneLength="296"
                >
         <SplitView.Pane>
-            <TextBlock Text="Pane"
-                        FontSize="24"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"/>
+            <StackPanel HorizontalAlignment="Left" Padding="10,40">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Grid.Column="0"
+                                CornerRadius="500">
+                        <Image Source="C:\ProgramData\Microsoft\User Account Pictures\user.png" 
+                               Height="50" 
+                               />
+                    </StackPanel>
+                    <StackPanel
+                                VerticalAlignment="Center"
+                                Margin="10,0"
+                                Grid.Column="1">
+                        <RichTextBlock>
+                            <Paragraph>
+                                <Run FontWeight="Bold" FontFamily="Sogoe UI Font">user</Run>
+                            </Paragraph>
+                            <Paragraph>
+                                <Run FontFamily="Sogoe UI Font">ローカルアカウント</Run>
+                            </Paragraph>
+                        </RichTextBlock>
+                    </StackPanel>
+                </Grid>
+                <AutoSuggestBox PlaceholderText="設定の検索"
+                                Margin="0,35"
+                                FontFamily="Segoe UI font"
+                                QueryIcon="Find"
+                                Width="270"
+                                ></AutoSuggestBox>
+                <ListView>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <ImageIcon Source="https://raw.githubusercontent.com/microsoft/fluentui-system-icons/main/assets/System/SVG/ic_fluent_system_20_regular.svg" 
+                                   MaxWidth="20"
+                                   VerticalAlignment="Center"
+                                   Margin="8,0"/>
+                        <TextBlock Text="システム"
+                                       FontFamily="Segoe UI font"
+                                   VerticalAlignment="Center"
+                                       Margin="8,0"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <ImageIcon Source="https://raw.githubusercontent.com/microsoft/fluentui-system-icons/main/assets/Bluetooth/SVG/ic_fluent_bluetooth_20_regular.svg" 
+                                   MaxWidth="20"
+                                   VerticalAlignment="Center"
+                                   Margin="8,0"/>
+                        <TextBlock Text="Bluetoothとデバイス"
+                                       FontFamily="Segoe UI font"
+                                   VerticalAlignment="Center"
+                                       Margin="8,0"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <ImageIcon Source="https://raw.githubusercontent.com/microsoft/fluentui-system-icons/main/assets/WiFi 1/SVG/ic_fluent_wifi_1_20_regular.svg" 
+                                   MaxWidth="20"
+                                   VerticalAlignment="Center"
+                                   Margin="8,0"/>
+                        <TextBlock Text="ネットワークとインターネット"
+                                       FontFamily="Segoe UI font"
+                                   VerticalAlignment="Center"
+                                       Margin="8,0"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <ImageIcon Source="https://raw.githubusercontent.com/microsoft/fluentui-system-icons/main/assets/People Settings/SVG/ic_fluent_people_settings_20_regular.svg" 
+                                   MaxWidth="20"
+                                   VerticalAlignment="Center"
+                                   Margin="8,0"/>
+                        <TextBlock Text="個人用設定"
+                                       FontFamily="Segoe UI font"
+                                   VerticalAlignment="Center"
+                                       Margin="8,0"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <ImageIcon Source="https://raw.githubusercontent.com/microsoft/fluentui-system-icons/main/assets/App%20Folder/SVG/ic_fluent_app_folder_20_regular.svg" 
+                                   MaxWidth="20"
+                                   VerticalAlignment="Center"
+                                   Margin="8,0"/>
+                        <TextBlock Text="アプリ"
+                                       FontFamily="Segoe UI font"
+                                   x:Name="App"
+                                   VerticalAlignment="Center"
+                                       Margin="8,0"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <ImageIcon Source="https://raw.githubusercontent.com/microsoft/fluentui-system-icons/main/assets/Person/SVG/ic_fluent_person_20_regular.svg" 
+                                   MaxWidth="20"
+                                   VerticalAlignment="Center"
+                                   Margin="8,0"/>
+                        <TextBlock Text="アカウント"
+                                       FontFamily="Segoe UI font"
+                                   VerticalAlignment="Center"
+                                       Margin="8,0"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <ImageIcon Source="https://raw.githubusercontent.com/microsoft/fluentui-system-icons/main/assets/Earth/SVG/ic_fluent_earth_20_regular.svg" 
+                                   MaxWidth="20"
+                                   VerticalAlignment="Center"
+                                   Margin="8,0"/>
+                        <TextBlock Text="時刻と言語"
+                                       FontFamily="Segoe UI font"
+                                   VerticalAlignment="Center"
+                                       Margin="8,0"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <ImageIcon Source="https://raw.githubusercontent.com/microsoft/fluentui-system-icons/main/assets/Games/SVG/ic_fluent_games_20_regular.svg" 
+                                   MaxWidth="20"
+                                   VerticalAlignment="Center"
+                                   Margin="8,0"/>
+                        <TextBlock Text="ゲーム"
+                                       FontFamily="Segoe UI font"
+                                   VerticalAlignment="Center"
+                                       Margin="8,0"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <ImageIcon Source="https://raw.githubusercontent.com/microsoft/fluentui-system-icons/main/assets/Accessibility/SVG/ic_fluent_accessibility_20_regular.svg" 
+                                   MaxWidth="20"
+                                   VerticalAlignment="Center"
+                                   Margin="8,0"/>
+                        <TextBlock Text="アクセシビリティ"
+                                       FontFamily="Segoe UI font"
+                                   VerticalAlignment="Center"
+                                       Margin="8,0"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <ImageIcon Source="https://raw.githubusercontent.com/microsoft/fluentui-system-icons/main/assets/Shield/SVG/ic_fluent_shield_20_regular.svg" 
+                                   MaxWidth="20"
+                                   VerticalAlignment="Center"
+                                   Margin="8,0"/>
+                        <TextBlock Text="プライバシーとセキュリティ"
+                                       FontFamily="Segoe UI font"
+                                   VerticalAlignment="Center"
+                                       Margin="8,0"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <ImageIcon Source="https://raw.githubusercontent.com/microsoft/fluentui-system-icons/main/assets/Arrow%20Sync/SVG/ic_fluent_arrow_sync_20_regular.svg" 
+                                   MaxWidth="20"
+                                   VerticalAlignment="Center"
+                                   Margin="8,0"/>
+                        <TextBlock Text="Windows Update"
+                                       FontFamily="Segoe UI font"
+                                   VerticalAlignment="Center"
+                                       Margin="8,0"/>
+                    </StackPanel>
+                </ListView>
+            </StackPanel>
         </SplitView.Pane>
         <Grid>
             <Grid.RowDefinitions>
@@ -30,6 +174,7 @@
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="アプリ"
                                FontWeight="Medium"
+                               FontFamily="Segoe UI font"
                                Foreground="#7b7b7b"
                                FontSize="27"/>
                     <FontIcon FontFamily="Segoe Fluent Icons" 
@@ -40,13 +185,16 @@
                               VerticalAlignment="Center"
                               />
                     <TextBlock Text="インストールされているアプリ"
+                               FontFamily="Segoe UI font"
                                FontWeight="Medium"
                                FontSize="27"/>
                 </StackPanel>
                 <AutoSuggestBox PlaceholderText="アプリの検索"
+                                FontFamily="Segoe UI font"
                                 Width="370"
                                 QueryIcon="Find"
                                 HorizontalAlignment="Left"
+                                TextChanged="QuerySubmitted"
                                 Margin="2,23"
                                 FontSize="13"/>
                 <Grid>
@@ -56,7 +204,9 @@
                                 Grid.Row="0"
                                 Grid.Column="0">
                             <TextBlock Text="n個のアプリが見つかりました"
-                                   FontSize="15"/>
+                                       x:Name="AllApplication"
+                                       FontFamily="Segoe UI font"
+                                       FontSize="15"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal"
                                 VerticalAlignment="Center"
@@ -69,14 +219,17 @@
                                    HorizontalAlignment="Center"
                                    Margin="8,0"/>
                             <TextBlock Text="フィルター:"
-                                   VerticalAlignment="Center"
-                                   HorizontalAlignment="Center"
-                                   Margin="4,0"/>
+                                       FontFamily="Segoe UI font"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       Margin="4,0"/>
                             <ComboBox PlaceholderText=""  
-                                  SelectedValuePath="Item1"
-                                  Width="140">
-                                <x:String>すべてのドライブ</x:String>
-                                <x:String>OS（C:）</x:String>
+                                      SelectedIndex="0"
+                                      SelectionChanged="ComboBox_SelectionChanged"
+                                      Width="140">
+                                <TextBlock x:Name="none">なし</TextBlock>
+                                <TextBlock x:Name="visible">表示のみ</TextBlock>
+                                <TextBlock x:Name="invisible">非表示のみ</TextBlock>
                             </ComboBox>
 
                             <ImageIcon Source="https://raw.githubusercontent.com/microsoft/fluentui-system-icons/main/assets/Arrow%20Sort/SVG/ic_fluent_arrow_sort_16_regular.svg" 
@@ -85,12 +238,13 @@
                                    HorizontalAlignment="Center"
                                    Margin="8,0"/>
                             <TextBlock Text="並び替え:"
+                                       FontFamily="Segoe UI font"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Center"
                                    Margin="4,0"/>
                             <ComboBox PlaceholderText=""  
-                                  SelectedValuePath="Item1"
-                                  Width="130">
+                                      SelectedIndex="0"
+                                      Width="130">
                                 <x:String>名前（昇順）</x:String>
                                 <x:String>名前（降順）</x:String>
                                 <x:String>インストール日付</x:String>
@@ -124,12 +278,13 @@
                                     Source="{Binding source}"
                                     VerticalAlignment="Center"
                                     Margin="20,10"/>
-                                    <RichTextBlock VerticalAlignment="Center">
+                                    <RichTextBlock VerticalAlignment="Center"
+                                                   FontFamily="Segoe UI font">
                                         <Paragraph>
-                                            <Run Text="{Binding ApplicationName}" />
+                                            <Run Text="{Binding ApplicationName}" FontFamily="Segoe UI font"/>
                                         </Paragraph>
                                         <Paragraph Foreground="#7b7b7b" FontSize="13">
-                                            <Run Text="{Binding ApplicationDetail}" />
+                                            <Run Text="{Binding ApplicationDetail}" FontFamily="Segoe UI font"/>
                                         </Paragraph>
                                     </RichTextBlock>
                                 </StackPanel>
@@ -138,6 +293,7 @@
                                         VerticalAlignment="Center"
                                         Margin="-90,0">
                                     <TextBlock Margin="7,0"
+                                                FontFamily="Segoe UI font"
                                                Text="{Binding visible}"
                                                VerticalAlignment="Center"/>
                                     <ToggleSwitch VerticalAlignment="Center"

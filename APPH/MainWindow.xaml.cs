@@ -63,6 +63,8 @@ namespace APPH
             public string path { get; set; }
         }
 
+
+        public static List<Lists> listslist = new List<Lists>();
         public MainWindow()
         {
             #region 初期処理
@@ -227,7 +229,6 @@ namespace APPH
             #endregion
 
             #region 生成
-            var listslist = new List<Lists>();
             var tmpList = new List<string>();
             foreach (Root root in rootList)
             {
@@ -286,6 +287,7 @@ namespace APPH
                 //ImageSource imagesrc = new BitmapImage(imageurl);
             }
             listView.ItemsSource = listslist;
+            AllApplication.Text = $"{listslist.ToArray().Length}個のアプリが見つかりました";
             #endregion
 
 
@@ -362,6 +364,52 @@ namespace APPH
             }
 
 
+        }
+
+        private void QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            Debug.WriteLine(sender.Text);
+            if (sender.Text == "")
+            {
+                listView.ItemsSource = listslist;
+                AllApplication.Text = $"{listslist.ToArray().Length}個のアプリが見つかりました";
+            }
+            else
+            {
+                List<Lists> QueryList = listslist.FindAll((a) => a.ApplicationName.ToLower().Contains(sender.Text.ToLower()));
+                listView.ItemsSource = QueryList;
+                AllApplication.Text = $"{QueryList.ToArray().Length}個のアプリが見つかりました";
+            }
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs args)
+        {
+            TextBlock textBlock = (TextBlock)((ComboBox)sender).SelectedItem;
+            Debug.WriteLine(textBlock.Name);
+            if (textBlock.Name == "visible")
+            {
+                List<Lists> QueryList = listslist.FindAll((a) => a.isHide==true);
+                listView.ItemsSource = QueryList;
+                AllApplication.Text = $"{QueryList.ToArray().Length}個のアプリが見つかりました";
+            }
+            else if (textBlock.Name == "invisible")
+            {
+                List<Lists> QueryList = listslist.FindAll((a) => a.isHide==false);
+                listView.ItemsSource = QueryList;
+                AllApplication.Text = $"{QueryList.ToArray().Length}個のアプリが見つかりました";
+            }
+            else if(textBlock.Name == "none")
+            {
+                if (listslist != null && listView!=null)
+                {
+                    listView.ItemsSource = listslist;
+                    AllApplication.Text = $"{listslist.ToArray().Length}個のアプリが見つかりました";
+                }
+            }
+            else
+            {
+
+            }
         }
     }
 }
